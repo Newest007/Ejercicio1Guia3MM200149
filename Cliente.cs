@@ -44,7 +44,7 @@ namespace Ejercicio1___Guía3_MM200149
             set { nit = value; }
         }
 
-         public string NumCuenta
+        public string NumCuenta
         {
             get { return numcuenta; }
             set { numcuenta = value; }
