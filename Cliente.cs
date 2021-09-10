@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio1___Guía3_MM200149
 {
-    class Cliente
+    public class Cliente
     {
         string dui;
         string nombre;
