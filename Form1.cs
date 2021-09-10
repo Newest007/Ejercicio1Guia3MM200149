@@ -65,9 +65,23 @@ namespace Ejercicio1___Guía3_MM200149
             nuevocliente.DUI = txtdui.Text;
             nuevocliente.Nombre = txtnombre.Text;
             nuevocliente.Apellido = txtapellidos.Text;
-           
-            
+            nuevocliente.TipoCuenta = cmbcuenta.Text;
+            nuevocliente.Nit = txtnit.Text;
+            nuevocliente.NumCuenta = txtnmcuenta.Text + txtcuenta.Text;
+            MessageBox.Show("Datos Ingresados con Éxito");
 
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+            txtdui.Clear();
+            txtnombre.Clear();
+            txtcuenta.Clear();
+            cmbcuenta.Text = "";
+            txtapellidos.Clear();
+            txtnmcuenta.Clear();
+            txtnit.Clear();
+            
         }
     }
 }

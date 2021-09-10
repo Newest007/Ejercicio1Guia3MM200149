@@ -204,6 +204,7 @@ namespace Ejercicio1___Guía3_MM200149
             this.btnnuevo.TabIndex = 4;
             this.btnnuevo.Text = "Nuevo";
             this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // btnguardar
             // 
