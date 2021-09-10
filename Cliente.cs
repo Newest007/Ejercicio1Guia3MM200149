@@ -26,6 +26,30 @@ namespace Ejercicio1___Guía3_MM200149
             set { dui = value; }
         }
 
+        public string Apellido
+        {
+            get { return apellido; }
+            set { apellido = value; }
+        }
+
+        public string TipoCuenta
+        {
+            get { return tipocuenta; }
+            set { tipocuenta = value; }
+        }
+
+        public string Nit
+        {
+            get { return nit; }
+            set { nit = value; }
+        }
+
+         public string NumCuenta
+        {
+            get { return numcuenta; }
+            set { numcuenta = value; }
+        }
+
 
 
 

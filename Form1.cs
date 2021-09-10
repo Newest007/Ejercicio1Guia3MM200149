@@ -17,6 +17,8 @@ namespace Ejercicio1___Guía3_MM200149
             InitializeComponent();
         }
 
+        Cliente nuevocliente = new Cliente();
+
         private void Form1_Load(object sender, EventArgs e)
         {
             cmbcuenta.Items.Clear();
@@ -26,6 +28,7 @@ namespace Ejercicio1___Guía3_MM200149
             cmbcuenta.Enabled = true;
             txtnmcuenta.Enabled = false;
 
+            
 
         }
 
@@ -54,6 +57,16 @@ namespace Ejercicio1___Guía3_MM200149
 
 
 
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            nuevocliente.DUI = txtdui.Text;
+            nuevocliente.Nombre = txtnombre.Text;
+            nuevocliente.Apellido = txtapellidos.Text;
+           
+            
 
         }
     }
