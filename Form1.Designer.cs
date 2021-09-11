@@ -1,7 +1,7 @@
 ﻿
 namespace Ejercicio1___Guía3_MM200149
 {
-    partial class Form1
+    partial class frmprincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -32,6 +32,8 @@ namespace Ejercicio1___Guía3_MM200149
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtnmcuenta = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtcuenta = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,14 +45,14 @@ namespace Ejercicio1___Guía3_MM200149
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtdui = new System.Windows.Forms.TextBox();
-            this.btnnuevo = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtnmcuenta = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgvfrm1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvfrm1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,16 +91,33 @@ namespace Ejercicio1___Guía3_MM200149
             this.groupBox1.Controls.Add(this.txtnombre);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtdui);
-            this.groupBox1.Controls.Add(this.btnnuevo);
             this.groupBox1.Controls.Add(this.btnguardar);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(30, 91);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(457, 343);
+            this.groupBox1.Size = new System.Drawing.Size(424, 343);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inscripción de clientes";
+            // 
+            // txtnmcuenta
+            // 
+            this.txtnmcuenta.Location = new System.Drawing.Point(141, 276);
+            this.txtnmcuenta.Multiline = true;
+            this.txtnmcuenta.Name = "txtnmcuenta";
+            this.txtnmcuenta.Size = new System.Drawing.Size(54, 34);
+            this.txtnmcuenta.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(201, 283);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(18, 23);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "-";
             // 
             // txtcuenta
             // 
@@ -196,19 +215,9 @@ namespace Ejercicio1___Guía3_MM200149
             this.txtdui.Size = new System.Drawing.Size(129, 34);
             this.txtdui.TabIndex = 5;
             // 
-            // btnnuevo
-            // 
-            this.btnnuevo.Location = new System.Drawing.Point(295, 99);
-            this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Size = new System.Drawing.Size(111, 41);
-            this.btnnuevo.TabIndex = 4;
-            this.btnnuevo.Text = "Nuevo";
-            this.btnnuevo.UseVisualStyleBackColor = true;
-            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
-            // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(295, 52);
+            this.btnguardar.Location = new System.Drawing.Point(296, 33);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(111, 41);
             this.btnguardar.TabIndex = 3;
@@ -218,57 +227,64 @@ namespace Ejercicio1___Guía3_MM200149
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.dgvfrm1);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(535, 195);
+            this.groupBox2.Location = new System.Drawing.Point(514, 91);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(195, 93);
+            this.groupBox2.Size = new System.Drawing.Size(408, 343);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Consultar clientes";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(201, 283);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(18, 23);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "-";
-            // 
-            // txtnmcuenta
-            // 
-            this.txtnmcuenta.Location = new System.Drawing.Point(141, 276);
-            this.txtnmcuenta.Multiline = true;
-            this.txtnmcuenta.Name = "txtnmcuenta";
-            this.txtnmcuenta.Size = new System.Drawing.Size(54, 34);
-            this.txtnmcuenta.TabIndex = 18;
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(46, 33);
+            this.button3.Location = new System.Drawing.Point(19, 32);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(111, 41);
             this.button3.TabIndex = 4;
             this.button3.Text = "Consultar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(343, 449);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 41);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // dgvfrm1
+            // 
+            this.dgvfrm1.AllowUserToOrderColumns = true;
+            this.dgvfrm1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvfrm1.Location = new System.Drawing.Point(19, 92);
+            this.dgvfrm1.Name = "dgvfrm1";
+            this.dgvfrm1.Size = new System.Drawing.Size(365, 191);
+            this.dgvfrm1.TabIndex = 6;
+            this.dgvfrm1.DoubleClick += new System.EventHandler(this.dgvfrm1_DoubleClick);
+            // 
+            // frmprincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(769, 502);
+            this.ClientSize = new System.Drawing.Size(934, 502);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "frmprincipal";
             this.Text = "Ejercicio 1 - Guía 3 MM200149";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvfrm1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,7 +304,6 @@ namespace Ejercicio1___Guía3_MM200149
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtdui;
-        private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.TextBox txtcuenta;
         private System.Windows.Forms.Label label7;
@@ -296,6 +311,8 @@ namespace Ejercicio1___Guía3_MM200149
         private System.Windows.Forms.TextBox txtnmcuenta;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvfrm1;
     }
 }
 
