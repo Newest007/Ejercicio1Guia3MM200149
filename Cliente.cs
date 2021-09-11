@@ -14,17 +14,20 @@ namespace Ejercicio1___Guía3_MM200149
         string tipocuenta;
         string nit;
         string numcuenta;
-        public string Nombre
-        {
-            get { return nombre; }
-            set { nombre = value; }
-        }
+        
 
         public string DUI
         {
             get { return dui; }
             set { dui = value; }
         }
+
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+
 
         public string Apellido
         {

@@ -26,7 +26,7 @@ namespace Ejercicio1___Guía3_MM200149
             cmbcuenta.Items.Add("Plazos");
             cmbcuenta.Enabled = true;
             txtnmcuenta.Enabled = false;
-            dgvfrm1.Visible = true;
+            groupBox2.Visible = false;
 
 
         }
@@ -71,13 +71,13 @@ namespace Ejercicio1___Guía3_MM200149
         private void button1_Click(object sender, EventArgs e)
         {
             Cliente clien = new Cliente();
-            clien.DUI = txtdui.Text;
+            clien.DUI = txtdui.Text + " - " + txtsegundodigdui.Text;
             clien.Nombre = txtnombre.Text;
             clien.Apellido = txtapellidos.Text;
             clien.TipoCuenta = cmbcuenta.Text;
-            clien.Nit = txtnit.Text;
+            clien.Nit = txtprimernumnit.Text + "-" + txtsegundonumnit.Text + "-" + txttercernumnit + "-" + txtcuartonumnit;
             //Para añadir el acronimo del tipo de cuenta añadiendo junto con el numero de cuenta
-            clien.NumCuenta = txtnmcuenta.Text + txtcuenta.Text; 
+            clien.NumCuenta = txtnmcuenta.Text + " - " + txtcuenta.Text; 
             MessageBox.Show("Datos Ingresados con Éxito");
 
             if(edit_indice >-1)
@@ -106,11 +106,18 @@ namespace Ejercicio1___Guía3_MM200149
             cmbcuenta.Text = "";
             txtapellidos.Clear();
             txtnmcuenta.Clear();
-            txtnit.Clear();
+            txtprimernumnit.Clear();
+            txtsegundodigdui.Clear();
+            txtcuartonumnit.Clear();
+            txtsegundonumnit.Clear();
+            txttercernumnit.Clear();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            groupBox1.Visible = true;
+            groupBox2.Visible = false;
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -130,8 +137,38 @@ namespace Ejercicio1___Guía3_MM200149
             txtnombre.Text = clien.Nombre;
             txtapellidos.Text = clien.Apellido;
             txtcuenta.Text = clien.TipoCuenta;
-            txtnit.Text = clien.Nit;
+            txtprimernumnit.Text = clien.Nit;
             txtnmcuenta.Text = clien.NumCuenta;
+
+        }
+
+        private void dgvfrm1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            groupBox2.Visible = true;
+            groupBox1.Visible = false;
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if(edit_indice>-1)
+            {
+                Clientes.RemoveAt(edit_indice);
+                edit_indice = -1;
+                limpiar();
+                ActualizarGrid();
+            }
+
+            else
+            {
+                MessageBox.Show("Debes dar doble click sobre el cliente a eliminar");
+            }
+
+
 
         }
     }

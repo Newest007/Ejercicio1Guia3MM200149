@@ -38,7 +38,7 @@ namespace Ejercicio1___Guía3_MM200149
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbcuenta = new System.Windows.Forms.ComboBox();
-            this.txtnit = new System.Windows.Forms.TextBox();
+            this.txtprimernumnit = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtapellidos = new System.Windows.Forms.TextBox();
@@ -47,9 +47,19 @@ namespace Ejercicio1___Guía3_MM200149
             this.txtdui = new System.Windows.Forms.TextBox();
             this.btnguardar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.dgvfrm1 = new System.Windows.Forms.DataGridView();
+            this.btnconsultar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtsegundodigdui = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtcuartonumnit = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txtsegundonumnit = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txttercernumnit = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfrm1)).BeginInit();
@@ -60,7 +70,7 @@ namespace Ejercicio1___Guía3_MM200149
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(131, 29);
+            this.label1.Location = new System.Drawing.Point(128, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(552, 33);
             this.label1.TabIndex = 0;
@@ -70,7 +80,7 @@ namespace Ejercicio1___Guía3_MM200149
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(92, 37);
+            this.label2.Location = new System.Drawing.Point(72, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 23);
             this.label2.TabIndex = 1;
@@ -78,13 +88,22 @@ namespace Ejercicio1___Guía3_MM200149
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.txttercernumnit);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.txtsegundonumnit);
+            this.groupBox1.Controls.Add(this.txtcuartonumnit);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.txtsegundodigdui);
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.txtnmcuenta);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtcuenta);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cmbcuenta);
-            this.groupBox1.Controls.Add(this.txtnit);
+            this.groupBox1.Controls.Add(this.txtprimernumnit);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtapellidos);
@@ -94,7 +113,7 @@ namespace Ejercicio1___Guía3_MM200149
             this.groupBox1.Controls.Add(this.btnguardar);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(30, 91);
+            this.groupBox1.Location = new System.Drawing.Point(193, 71);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(424, 343);
             this.groupBox1.TabIndex = 2;
@@ -122,6 +141,7 @@ namespace Ejercicio1___Guía3_MM200149
             // txtcuenta
             // 
             this.txtcuenta.Location = new System.Drawing.Point(223, 277);
+            this.txtcuenta.MaxLength = 5;
             this.txtcuenta.Multiline = true;
             this.txtcuenta.Name = "txtcuenta";
             this.txtcuenta.Size = new System.Drawing.Size(86, 34);
@@ -141,7 +161,7 @@ namespace Ejercicio1___Guía3_MM200149
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(92, 234);
+            this.label6.Location = new System.Drawing.Point(36, 240);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 23);
             this.label6.TabIndex = 13;
@@ -157,12 +177,13 @@ namespace Ejercicio1___Guía3_MM200149
             this.cmbcuenta.TabIndex = 12;
             this.cmbcuenta.SelectedIndexChanged += new System.EventHandler(this.cmbcuenta_SelectedIndexChanged);
             // 
-            // txtnit
+            // txtprimernumnit
             // 
-            this.txtnit.Location = new System.Drawing.Point(141, 231);
-            this.txtnit.Name = "txtnit";
-            this.txtnit.Size = new System.Drawing.Size(129, 34);
-            this.txtnit.TabIndex = 11;
+            this.txtprimernumnit.Location = new System.Drawing.Point(76, 231);
+            this.txtprimernumnit.MaxLength = 4;
+            this.txtprimernumnit.Name = "txtprimernumnit";
+            this.txtprimernumnit.Size = new System.Drawing.Size(50, 34);
+            this.txtprimernumnit.TabIndex = 11;
             // 
             // label5
             // 
@@ -187,6 +208,7 @@ namespace Ejercicio1___Guía3_MM200149
             // txtapellidos
             // 
             this.txtapellidos.Location = new System.Drawing.Point(141, 133);
+            this.txtapellidos.MaxLength = 10;
             this.txtapellidos.Name = "txtapellidos";
             this.txtapellidos.Size = new System.Drawing.Size(129, 34);
             this.txtapellidos.TabIndex = 8;
@@ -194,6 +216,7 @@ namespace Ejercicio1___Guía3_MM200149
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(141, 86);
+            this.txtnombre.MaxLength = 10;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(129, 34);
             this.txtnombre.TabIndex = 7;
@@ -210,9 +233,10 @@ namespace Ejercicio1___Guía3_MM200149
             // 
             // txtdui
             // 
-            this.txtdui.Location = new System.Drawing.Point(141, 37);
+            this.txtdui.Location = new System.Drawing.Point(117, 37);
+            this.txtdui.MaxLength = 8;
             this.txtdui.Name = "txtdui";
-            this.txtdui.Size = new System.Drawing.Size(129, 34);
+            this.txtdui.Size = new System.Drawing.Size(105, 34);
             this.txtdui.TabIndex = 5;
             // 
             // btnguardar
@@ -227,30 +251,43 @@ namespace Ejercicio1___Guía3_MM200149
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dgvfrm1);
             this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.dgvfrm1);
+            this.groupBox2.Controls.Add(this.btnconsultar);
             this.groupBox2.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(514, 91);
+            this.groupBox2.Location = new System.Drawing.Point(46, 100);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(408, 343);
+            this.groupBox2.Size = new System.Drawing.Size(689, 314);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Consultar clientes";
             // 
-            // button3
+            // dgvfrm1
             // 
-            this.button3.Location = new System.Drawing.Point(19, 32);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 41);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Consultar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.dgvfrm1.AllowUserToOrderColumns = true;
+            this.dgvfrm1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvfrm1.Location = new System.Drawing.Point(19, 35);
+            this.dgvfrm1.Name = "dgvfrm1";
+            this.dgvfrm1.ReadOnly = true;
+            this.dgvfrm1.Size = new System.Drawing.Size(653, 191);
+            this.dgvfrm1.TabIndex = 6;
+            this.dgvfrm1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfrm1_CellContentClick);
+            this.dgvfrm1.DoubleClick += new System.EventHandler(this.dgvfrm1_DoubleClick);
+            // 
+            // btnconsultar
+            // 
+            this.btnconsultar.Location = new System.Drawing.Point(19, 232);
+            this.btnconsultar.Name = "btnconsultar";
+            this.btnconsultar.Size = new System.Drawing.Size(111, 64);
+            this.btnconsultar.TabIndex = 4;
+            this.btnconsultar.Text = "Inscribir Cliente";
+            this.btnconsultar.UseVisualStyleBackColor = true;
+            this.btnconsultar.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(343, 449);
+            this.button1.Location = new System.Drawing.Point(342, 420);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 41);
             this.button1.TabIndex = 5;
@@ -258,27 +295,112 @@ namespace Ejercicio1___Guía3_MM200149
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // dgvfrm1
+            // button2
             // 
-            this.dgvfrm1.AllowUserToOrderColumns = true;
-            this.dgvfrm1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvfrm1.Location = new System.Drawing.Point(19, 92);
-            this.dgvfrm1.Name = "dgvfrm1";
-            this.dgvfrm1.Size = new System.Drawing.Size(365, 191);
-            this.dgvfrm1.TabIndex = 6;
-            this.dgvfrm1.DoubleClick += new System.EventHandler(this.dgvfrm1_DoubleClick);
+            this.button2.Location = new System.Drawing.Point(296, 82);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(111, 41);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Consultar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtsegundodigdui
+            // 
+            this.txtsegundodigdui.Location = new System.Drawing.Point(242, 37);
+            this.txtsegundodigdui.MaxLength = 1;
+            this.txtsegundodigdui.Name = "txtsegundodigdui";
+            this.txtsegundodigdui.Size = new System.Drawing.Size(38, 34);
+            this.txtsegundodigdui.TabIndex = 20;
+            this.txtsegundodigdui.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(223, 44);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(18, 23);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "-";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(126, 236);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(18, 23);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "-";
+            // 
+            // txtcuartonumnit
+            // 
+            this.txtcuartonumnit.Location = new System.Drawing.Point(303, 230);
+            this.txtcuartonumnit.MaxLength = 1;
+            this.txtcuartonumnit.Name = "txtcuartonumnit";
+            this.txtcuartonumnit.Size = new System.Drawing.Size(38, 34);
+            this.txtcuartonumnit.TabIndex = 23;
+            this.txtcuartonumnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(296, 246);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(111, 36);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Eliminar Cliente";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // txtsegundonumnit
+            // 
+            this.txtsegundonumnit.Location = new System.Drawing.Point(145, 230);
+            this.txtsegundonumnit.MaxLength = 6;
+            this.txtsegundonumnit.Name = "txtsegundonumnit";
+            this.txtsegundonumnit.Size = new System.Drawing.Size(74, 34);
+            this.txtsegundonumnit.TabIndex = 24;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(219, 236);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(18, 23);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "-";
+            // 
+            // txttercernumnit
+            // 
+            this.txttercernumnit.Location = new System.Drawing.Point(235, 231);
+            this.txttercernumnit.MaxLength = 3;
+            this.txttercernumnit.Name = "txttercernumnit";
+            this.txttercernumnit.Size = new System.Drawing.Size(45, 34);
+            this.txttercernumnit.TabIndex = 26;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(282, 236);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(18, 23);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "-";
             // 
             // frmprincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(934, 502);
+            this.ClientSize = new System.Drawing.Size(787, 472);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmprincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ejercicio 1 - Guía 3 MM200149";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -297,7 +419,7 @@ namespace Ejercicio1___Guía3_MM200149
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbcuenta;
-        private System.Windows.Forms.TextBox txtnit;
+        private System.Windows.Forms.TextBox txtprimernumnit;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtapellidos;
@@ -310,9 +432,19 @@ namespace Ejercicio1___Guía3_MM200149
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtnmcuenta;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnconsultar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvfrm1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtsegundodigdui;
+        private System.Windows.Forms.TextBox txtcuartonumnit;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txttercernumnit;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtsegundonumnit;
     }
 }
 
