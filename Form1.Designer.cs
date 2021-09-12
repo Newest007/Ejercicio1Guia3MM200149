@@ -32,6 +32,17 @@ namespace Ejercicio1___Guía3_MM200149
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtmonto = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txttercernumnit = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtsegundonumnit = new System.Windows.Forms.TextBox();
+            this.txtcuartonumnit = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtsegundodigdui = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.txtnmcuenta = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtcuenta = new System.Windows.Forms.TextBox();
@@ -47,19 +58,12 @@ namespace Ejercicio1___Guía3_MM200149
             this.txtdui = new System.Windows.Forms.TextBox();
             this.btnguardar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.dgvfrm1 = new System.Windows.Forms.DataGridView();
             this.btnconsultar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtsegundodigdui = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtcuartonumnit = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.txtsegundonumnit = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txttercernumnit = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmbsucursal = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfrm1)).BeginInit();
@@ -70,11 +74,11 @@ namespace Ejercicio1___Guía3_MM200149
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(128, 21);
+            this.label1.Location = new System.Drawing.Point(282, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(552, 33);
+            this.label1.Size = new System.Drawing.Size(351, 33);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Inscripción y consulta de clientes Inscritos en un Banco";
+            this.label1.Text = "Historial de movimientos bancarios";
             // 
             // label2
             // 
@@ -88,6 +92,10 @@ namespace Ejercicio1___Guía3_MM200149
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbsucursal);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.txtmonto);
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txttercernumnit);
             this.groupBox1.Controls.Add(this.label11);
@@ -113,12 +121,117 @@ namespace Ejercicio1___Guía3_MM200149
             this.groupBox1.Controls.Add(this.btnguardar);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(193, 71);
+            this.groupBox1.Location = new System.Drawing.Point(248, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(424, 343);
+            this.groupBox1.Size = new System.Drawing.Size(424, 424);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inscripción de clientes";
+            // 
+            // txtmonto
+            // 
+            this.txtmonto.Location = new System.Drawing.Point(141, 328);
+            this.txtmonto.MaxLength = 9;
+            this.txtmonto.Multiline = true;
+            this.txtmonto.Name = "txtmonto";
+            this.txtmonto.Size = new System.Drawing.Size(81, 34);
+            this.txtmonto.TabIndex = 29;
+            this.txtmonto.TextChanged += new System.EventHandler(this.txtmonto_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(12, 333);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(123, 23);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Monto a guardar";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(282, 236);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(18, 23);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "-";
+            // 
+            // txttercernumnit
+            // 
+            this.txttercernumnit.Location = new System.Drawing.Point(235, 231);
+            this.txttercernumnit.MaxLength = 3;
+            this.txttercernumnit.Name = "txttercernumnit";
+            this.txttercernumnit.Size = new System.Drawing.Size(45, 34);
+            this.txttercernumnit.TabIndex = 26;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(219, 236);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(18, 23);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "-";
+            // 
+            // txtsegundonumnit
+            // 
+            this.txtsegundonumnit.Location = new System.Drawing.Point(144, 230);
+            this.txtsegundonumnit.MaxLength = 6;
+            this.txtsegundonumnit.Name = "txtsegundonumnit";
+            this.txtsegundonumnit.Size = new System.Drawing.Size(74, 34);
+            this.txtsegundonumnit.TabIndex = 24;
+            // 
+            // txtcuartonumnit
+            // 
+            this.txtcuartonumnit.Location = new System.Drawing.Point(303, 230);
+            this.txtcuartonumnit.MaxLength = 1;
+            this.txtcuartonumnit.Name = "txtcuartonumnit";
+            this.txtcuartonumnit.Size = new System.Drawing.Size(38, 34);
+            this.txtcuartonumnit.TabIndex = 23;
+            this.txtcuartonumnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtcuartonumnit.TextChanged += new System.EventHandler(this.txtcuartonumnit_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(126, 236);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(18, 23);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "-";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(223, 44);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(18, 23);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "-";
+            // 
+            // txtsegundodigdui
+            // 
+            this.txtsegundodigdui.Location = new System.Drawing.Point(242, 37);
+            this.txtsegundodigdui.MaxLength = 1;
+            this.txtsegundodigdui.Name = "txtsegundodigdui";
+            this.txtsegundodigdui.Size = new System.Drawing.Size(38, 34);
+            this.txtsegundodigdui.TabIndex = 20;
+            this.txtsegundodigdui.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(296, 82);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(111, 41);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Consultar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtnmcuenta
             // 
@@ -201,9 +314,9 @@ namespace Ejercicio1___Guía3_MM200149
             this.label4.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(57, 136);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 23);
+            this.label4.Size = new System.Drawing.Size(63, 23);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Apellidos";
+            this.label4.Text = "Apellido";
             // 
             // txtapellidos
             // 
@@ -227,9 +340,9 @@ namespace Ejercicio1___Guía3_MM200149
             this.label3.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(57, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 23);
+            this.label3.Size = new System.Drawing.Size(63, 23);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Nombres";
+            this.label3.Text = "Nombre";
             // 
             // txtdui
             // 
@@ -245,7 +358,7 @@ namespace Ejercicio1___Guía3_MM200149
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(111, 41);
             this.btnguardar.TabIndex = 3;
-            this.btnguardar.Text = "Inscribir ";
+            this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
             this.btnguardar.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -257,144 +370,83 @@ namespace Ejercicio1___Guía3_MM200149
             this.groupBox2.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(46, 100);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(689, 314);
+            this.groupBox2.Size = new System.Drawing.Size(809, 376);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Consultar clientes";
+            this.groupBox2.Text = "Consultar historial de clientes";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.Location = new System.Drawing.Point(360, 297);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(111, 36);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Eliminar Cliente";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // dgvfrm1
             // 
             this.dgvfrm1.AllowUserToOrderColumns = true;
+            this.dgvfrm1.BackgroundColor = System.Drawing.Color.DarkKhaki;
             this.dgvfrm1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvfrm1.Location = new System.Drawing.Point(19, 35);
             this.dgvfrm1.Name = "dgvfrm1";
             this.dgvfrm1.ReadOnly = true;
-            this.dgvfrm1.Size = new System.Drawing.Size(653, 191);
+            this.dgvfrm1.Size = new System.Drawing.Size(769, 214);
             this.dgvfrm1.TabIndex = 6;
             this.dgvfrm1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfrm1_CellContentClick);
             this.dgvfrm1.DoubleClick += new System.EventHandler(this.dgvfrm1_DoubleClick);
             // 
             // btnconsultar
             // 
-            this.btnconsultar.Location = new System.Drawing.Point(19, 232);
+            this.btnconsultar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnconsultar.Location = new System.Drawing.Point(19, 283);
             this.btnconsultar.Name = "btnconsultar";
             this.btnconsultar.Size = new System.Drawing.Size(111, 64);
             this.btnconsultar.TabIndex = 4;
-            this.btnconsultar.Text = "Inscribir Cliente";
-            this.btnconsultar.UseVisualStyleBackColor = true;
+            this.btnconsultar.Text = "Regresar";
+            this.btnconsultar.UseVisualStyleBackColor = false;
             this.btnconsultar.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(342, 420);
+            this.button1.Location = new System.Drawing.Point(406, 515);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 41);
             this.button1.TabIndex = 5;
             this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button2
+            // label14
             // 
-            this.button2.Location = new System.Drawing.Point(296, 82);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 41);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Consultar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(12, 382);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(121, 23);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Sucursal Inscrito";
             // 
-            // txtsegundodigdui
+            // cmbsucursal
             // 
-            this.txtsegundodigdui.Location = new System.Drawing.Point(242, 37);
-            this.txtsegundodigdui.MaxLength = 1;
-            this.txtsegundodigdui.Name = "txtsegundodigdui";
-            this.txtsegundodigdui.Size = new System.Drawing.Size(38, 34);
-            this.txtsegundodigdui.TabIndex = 20;
-            this.txtsegundodigdui.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(223, 44);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(18, 23);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "-";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(126, 236);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(18, 23);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "-";
-            // 
-            // txtcuartonumnit
-            // 
-            this.txtcuartonumnit.Location = new System.Drawing.Point(303, 230);
-            this.txtcuartonumnit.MaxLength = 1;
-            this.txtcuartonumnit.Name = "txtcuartonumnit";
-            this.txtcuartonumnit.Size = new System.Drawing.Size(38, 34);
-            this.txtcuartonumnit.TabIndex = 23;
-            this.txtcuartonumnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(296, 246);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 36);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Eliminar Cliente";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // txtsegundonumnit
-            // 
-            this.txtsegundonumnit.Location = new System.Drawing.Point(145, 230);
-            this.txtsegundonumnit.MaxLength = 6;
-            this.txtsegundonumnit.Name = "txtsegundonumnit";
-            this.txtsegundonumnit.Size = new System.Drawing.Size(74, 34);
-            this.txtsegundonumnit.TabIndex = 24;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(219, 236);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 23);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "-";
-            // 
-            // txttercernumnit
-            // 
-            this.txttercernumnit.Location = new System.Drawing.Point(235, 231);
-            this.txttercernumnit.MaxLength = 3;
-            this.txttercernumnit.Name = "txttercernumnit";
-            this.txttercernumnit.Size = new System.Drawing.Size(45, 34);
-            this.txttercernumnit.TabIndex = 26;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(282, 236);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(18, 23);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "-";
+            this.cmbsucursal.FormattingEnabled = true;
+            this.cmbsucursal.Location = new System.Drawing.Point(139, 377);
+            this.cmbsucursal.Name = "cmbsucursal";
+            this.cmbsucursal.Size = new System.Drawing.Size(141, 34);
+            this.cmbsucursal.TabIndex = 31;
+            this.cmbsucursal.SelectedIndexChanged += new System.EventHandler(this.cmbsucursal_SelectedIndexChanged);
             // 
             // frmprincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(789, 472);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(899, 568);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -445,6 +497,10 @@ namespace Ejercicio1___Guía3_MM200149
         private System.Windows.Forms.TextBox txttercernumnit;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtsegundonumnit;
+        private System.Windows.Forms.TextBox txtmonto;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbsucursal;
+        private System.Windows.Forms.Label label14;
     }
 }
 

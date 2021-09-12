@@ -14,6 +14,8 @@ namespace Ejercicio1___Guía3_MM200149
         string tipocuenta;
         string nit;
         string numcuenta;
+        string montoañadido;
+        string sucursalinscrito;
         
 
         public string DUI
@@ -53,7 +55,17 @@ namespace Ejercicio1___Guía3_MM200149
             set { numcuenta = value; }
         }
 
+        public string MontoTotal
+        {
+            get { return montoañadido; }
+            set { montoañadido = value; }
+        }
 
+        public string SucursalInscrito
+        {
+            get { return sucursalinscrito; }
+            set { sucursalinscrito = value; }
+        }
 
 
 

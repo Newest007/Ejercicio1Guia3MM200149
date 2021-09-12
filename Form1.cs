@@ -24,6 +24,11 @@ namespace Ejercicio1___Guía3_MM200149
             cmbcuenta.Items.Add("Corriente");
             cmbcuenta.Items.Add("Ahorros");
             cmbcuenta.Items.Add("Plazos");
+            cmbsucursal.Items.Add("Sucursal 1");
+            cmbsucursal.Items.Add("Sucursal 2");
+            cmbsucursal.Items.Add("Sucursal 3");
+            cmbsucursal.Items.Add("Sucursal 4");
+            cmbsucursal.Items.Add("Sucursal 5");
             cmbcuenta.Enabled = true;
             txtnmcuenta.Enabled = false;
             groupBox2.Visible = false;
@@ -75,9 +80,11 @@ namespace Ejercicio1___Guía3_MM200149
             clien.Nombre = txtnombre.Text;
             clien.Apellido = txtapellidos.Text;
             clien.TipoCuenta = cmbcuenta.Text;
-            clien.Nit = txtprimernumnit.Text + "-" + txtsegundonumnit.Text + "-" + txttercernumnit + "-" + txtcuartonumnit;
+            clien.Nit = txtprimernumnit.Text + "-" + txtsegundonumnit.Text + "-" + txttercernumnit.Text + "-" + txtcuartonumnit.Text;
             //Para añadir el acronimo del tipo de cuenta añadiendo junto con el numero de cuenta
-            clien.NumCuenta = txtnmcuenta.Text + " - " + txtcuenta.Text; 
+            clien.NumCuenta = txtnmcuenta.Text + " - " + txtcuenta.Text;
+            clien.MontoTotal = "$" + txtmonto.Text + ".00";
+            clien.SucursalInscrito = cmbsucursal.Text;
             MessageBox.Show("Datos Ingresados con Éxito");
 
             if(edit_indice >-1)
@@ -111,6 +118,8 @@ namespace Ejercicio1___Guía3_MM200149
             txtcuartonumnit.Clear();
             txtsegundonumnit.Clear();
             txttercernumnit.Clear();
+            txtmonto.Clear();
+            cmbsucursal.Text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -139,6 +148,8 @@ namespace Ejercicio1___Guía3_MM200149
             txtcuenta.Text = clien.TipoCuenta;
             txtprimernumnit.Text = clien.Nit;
             txtnmcuenta.Text = clien.NumCuenta;
+            txtmonto.Text = clien.MontoTotal;
+            cmbsucursal.Text = clien.SucursalInscrito;
 
         }
 
@@ -169,6 +180,21 @@ namespace Ejercicio1___Guía3_MM200149
             }
 
 
+
+        }
+
+        private void txtmonto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbsucursal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcuartonumnit_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
