@@ -72,11 +72,11 @@ namespace Ejercicio1___Guía3_MM200149
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(282, 21);
+            this.label1.Location = new System.Drawing.Point(271, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 33);
+            this.label1.Size = new System.Drawing.Size(387, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Historial de movimientos bancarios";
             // 
@@ -378,7 +378,7 @@ namespace Ejercicio1___Guía3_MM200149
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(360, 297);
+            this.button3.Location = new System.Drawing.Point(360, 298);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(111, 36);
             this.button3.TabIndex = 7;
@@ -414,7 +414,7 @@ namespace Ejercicio1___Guía3_MM200149
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(406, 515);
+            this.button1.Location = new System.Drawing.Point(406, 514);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 41);
             this.button1.TabIndex = 5;
